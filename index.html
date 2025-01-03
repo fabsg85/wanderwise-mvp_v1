@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WanderWise MVP</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header / Nav -->
+  <header>
+    <h1>WanderWise</h1>
+    <p>Tu compañero de viajes personalizado</p>
+  </header>
+
+  <!-- Sección de Registro / Login Simulado -->
+  <section id="auth-section">
+    <h2>Registro / Login</h2>
+    <div>
+      <label for="username">Nombre de usuario / Correo:</label>
+      <input type="text" id="username" placeholder="Ingresa tu usuario" />
+      <button id="loginBtn">Ingresar</button>
+    </div>
+  </section>
+
+  <!-- Sección de Preferencias -->
+  <section id="preferences-section" style="display:none;">
+    <h2>Preferencias de Viaje</h2>
+    <label for="budget">Presupuesto (USD):</label>
+    <input type="number" id="budget" placeholder="Ej. 500" />
+
+    <p>Selecciona tus intereses:</p>
+    <div>
+      <input type="checkbox" id="interestNature" value="naturaleza" />
+      <label for="interestNature">Naturaleza</label>
+
+      <input type="checkbox" id="interestCulture" value="cultura" />
+      <label for="interestCulture">Cultura</label>
+
+      <input type="checkbox" id="interestGastro" value="gastronomia" />
+      <label for="interestGastro">Gastronomía</label>
+      <!-- Agrega más según necesites -->
+    </div>
+
+    <button id="savePreferencesBtn">Guardar Preferencias</button>
+  </section>
+
+  <!-- Sección de Itinerarios -->
+  <section id="itinerary-section" style="display:none;">
+    <h2>Generar Itinerario</h2>
+    <label for="destination">Destino:</label>
+    <input type="text" id="destination" placeholder="Ej. México, París..." />
+    <label for="days">Número de días:</label>
+    <input type="number" id="days" placeholder="Ej. 5" />
+
+    <button id="createItineraryBtn">Crear Itinerario</button>
+
+    <div id="itinerary-result">
+      <!-- El itinerario generado se mostrará aquí -->
+    </div>
+  </section>
+
+  <!-- Sección Social / Comentarios -->
+  <section id="social-section" style="display:none;">
+    <h2>Comunidad / Reseñas</h2>
+    <textarea id="reviewText" placeholder="Comparte tu experiencia..."></textarea>
+    <button id="postReviewBtn">Publicar Reseña</button>
+    
+    <div id="reviewsContainer">
+      <!-- Se mostrarán las reseñas aquí -->
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
